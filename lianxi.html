@@ -6,6 +6,7 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="swiper-4.1.0.min.css">
 	<link rel="stylesheet" href="app.css">
 	<link rel="stylesheet" href="fontawesome-4.2.0\4.2.0\css\font-awesome.min.css">
 </head>
@@ -13,7 +14,7 @@
 	<header data-am-widget="header" class="tb-header">
 		<div class="am-header"> 
 			<a href="">
-				<img src="logo.png">
+				<img src="images/logo.png">
 			</a>
 		</div>
 		<a href="" class="header-search">
@@ -21,7 +22,19 @@
 			<i class="am-icon-search"></i>
 		</a>	
 	</header>
-	<div class="am-slider-default">
+	<div class="swiper-container">
+     		<div class="swiper-wrapper">
+			      <div class="swiper-slide"><img src="images/banner1.jpg"></div>
+			      <div class="swiper-slide"><img src="images/banner2.jpg"></div>
+			      <div class="swiper-slide"><img src="images/banner3.jpg"></div>
+   			</div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+	<!-- <div class="am-slider-default">
 		<ul class="am-sliders">
 			<li><img src="images/banner1.jpg"></li>
 			<li><img src="images/banner2.jpg"></li>
@@ -32,7 +45,7 @@
 			<li><a href="">2</a></li>
 			<li><a href="">3</a></li>
 		</ol> -->
-	</div>
+	
 	<div id="tb-nav">
 		<ul>
 			<li>
@@ -196,6 +209,25 @@
 			</li>
 		</ul>
 	</footer>
+	<script src="swiper-4.1.0.min.js"></script>
+	 <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 	<script type="text/javascript">
            var c,_=Function;
            with(o=document.getElementById("gundong")){ innerHTML+=innerHTML; onmouseover=_("c=1"); onmouseout=_("c=0");}
